@@ -1,1 +1,1 @@
-Simple Reflex Agent (Vacuum Cleaner) to clean 4 locations
+Simple Reflex Agent (Vacuum Cleaner) to clean 2 locations
