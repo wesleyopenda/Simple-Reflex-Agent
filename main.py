@@ -25,8 +25,13 @@ class Agent(Environment): # create the agent
 
             # move to the next location
             new_index = Environment.location.index(Environment.vacuum_location) + 1
-            if new_index == 1:
+            if new_index == 2:
                 new_index = 0
-                count += 1
 
             Environment.vacuum_location = Environment.location[new_index]
+            count += 1
+        print('Finished cleaning :-)')
+
+# create the objects
+environment_object = Environment()
+agent_object = Agent(environment_object)
