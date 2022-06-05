@@ -16,5 +16,9 @@ class Agent(Environment): # create the agent
 
         count = 0
         while count < 2:
+            # if the area where the vaccum is is dirty, clean it. Otherwise leave it
             if Environment.location_condition[Environment.vacuum_location] == 1:
                 Environment.location_condition[Environment.vacuum_location] = 0
+                print('Location ', Environment.vacuum_location, ' has been cleaned.')
+            else:
+                print('Location ', Environment.vacuum_location, ' is already clean.')
