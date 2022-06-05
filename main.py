@@ -22,3 +22,11 @@ class Agent(Environment): # create the agent
                 print('Location ', Environment.vacuum_location, ' has been cleaned.')
             else:
                 print('Location ', Environment.vacuum_location, ' is already clean.')
+
+            # move to the next location
+            new_index = Environment.location.index(Environment.vacuum_location) + 1
+            if new_index == 1:
+                new_index = 0
+                count += 1
+
+            Environment.vacuum_location = Environment.location[new_index]
