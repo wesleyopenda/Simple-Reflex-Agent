@@ -1,16 +1,10 @@
-# This is a sample Python script.
+import random
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+class Environment(object):
+    def __init__(self):
+        self.location = ['a', 'b']
+        self.location_condition = {'a':'0',
+                                   'b':'0'}
+        self.vacuum_location = random.choice(self.location)
+        self.location_condition['a'] = random.randint(0, 1)
+        self.location_condition['b'] = random.randint(0, 1)
